@@ -12,9 +12,8 @@ SECRET_KEY = "django-insecure-7^k(s=%oces*^nx931(zz-mx60@9g9!w=uw8z&*p3a_cp)!xcb
 DEBUG = True
 
 ALLOWED_HOSTS = ["*"]
-SECURE_SSL_REDIRECT = False
-SECURE_PROXY_SSL_HEADER = None
-
+SECURE_SSL_REDIRECT = True
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
 
 INSTALLED_APPS = [
@@ -26,7 +25,6 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     "app",
     "rest_framework",
-    "sslserver"
 ]
 
 MIDDLEWARE = [
