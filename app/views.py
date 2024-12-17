@@ -279,7 +279,6 @@ class ProcessEmailsView(View):
             return {"booked_emails": [], "cancelled_emails": [], "edited_emails": []}
 
     def get(self, request, *args, **kwargs):
-        print("this is called")
         combined_emails = {"booked_emails": [], "cancelled_emails": [], "edited_emails": []}
         try:
             for account in EMAIL_ACCOUNTS:
